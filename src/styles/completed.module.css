@@ -1,0 +1,41 @@
+.completed-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.title-wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.title{
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-color);
+}
+.message{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+.completed-column{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+@media (max-width:768px) {
+  .title-wrapper{
+    justify-content: space-between;
+}
+.title{
+  position: relative;
+  transform: translateX(0);
+  left: 0;
+}
+}

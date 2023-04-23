@@ -1,0 +1,42 @@
+
+.hamburger-btn{
+    color: white;
+    
+}
+.hambuger-svg{
+    cursor: pointer;
+}
+@keyframes in-buttons {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.buttons-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    right: 0;
+    bottom: 78px;
+    background-color: rgb(12, 11, 16,0.6);
+    animation: in-buttons ease-in-out 0.24s;
+    backdrop-filter: blur(18px);
+    border-radius: 0px;
+    padding: 30px;
+    width: 100vw;
+
+}
+.buttons-wrapper button {
+    width: 100%;
+}
+@media (min-width:768px) {
+    .buttons-wrapper{
+        display: none;
+    }
+    .button-hamburger-wrapper{
+        display: none;
+    }
+}
