@@ -46,9 +46,9 @@ function Task(props) {
     <div className={styles["tasks-item"]}>
       <div>
         {children.state === "incomplete"
-          ? (
-            <h3 className={styles["task-date"]}>Entrega: 27/04/23</h3>
-          )
+          ? 
+            /*<h3 className={styles["task-date"]}>Entrega: 27/04/23</h3> AGREGAR EN LA SEGUNDA VERSION*/
+            null
           : children.state === "complete"
             ? (<p className={styles["task-state"]}>Completed</p>)
             : null

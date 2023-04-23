@@ -49,13 +49,13 @@ function TaskForm(props) {
   return (
     <div  className={styles["form-container"]}>
       <form ref={componentRef} onSubmit={handleSubmit}>
-        <h2>Agrega una tarea nueva</h2>
-        <p>Escribe debajo la informacion de la tarea</p>
+        <h2>Add a new task</h2>
+        <p>Write below the task information</p>
         <div className={styles["inputs-container"]}>
-          <input required placeholder="Nombre" type="text" name="title" />
-          <textarea required placeholder="Descripcion" name="description"></textarea>
+          <input required placeholder="Title" type="text" name="title" />
+          <textarea required placeholder="Description" name="description"></textarea>
         </div>
-        <Btn bg="white" type="submit" >Agregar +</Btn>
+        <Btn bg="white" type="submit" >Add +</Btn>
       </form>
     </div>
 
