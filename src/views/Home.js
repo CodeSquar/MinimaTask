@@ -36,9 +36,8 @@ function App() {
           <Btn bg="var(--main-color)" color="black" onClick={() => setFormActive(!formActive)}>
             Add task +
           </Btn>
-        {tasks.length > 0 && (
+        {tasks.length > 0 | completedTasks.length > 0 && (
           <div className='media-disable-buttons'>
-
             <Btn bg="#87DA66" color="black" to="/completed">
               See completed
             </Btn>
