@@ -41,14 +41,37 @@ function Task(props) {
 
     }
   };
+  const handleDeleteTaskComplete = (type) =>{
+    let taskIndex
+    if(type === "task"){
+      taskIndex = tasks.findIndex((task) => task.id === id);
+      if (taskIndex !== -1) {
+        setTasks((prevTasks) => {
+          const newTasks = [...prevTasks];
+          newTasks.splice(taskIndex, 1);
+          return newTasks;
+        });
+      }
+    }else if(type === "completed"){
+      taskIndex = completedTasks.findIndex((task) => task.id === id);
+      if (taskIndex !== -1) {
+        setCompletedTasks((prevTasks) => {
+          const newTasks = [...prevTasks];
+          newTasks.splice(taskIndex, 1);
+          return newTasks;
+        });
+      }
+    }
+   
+  }
 
   return (
     <div className={styles["tasks-item"]}>
       <div>
         {children.state === "incomplete"
-          ? 
-            /*<h3 className={styles["task-date"]}>Entrega: 27/04/23</h3> AGREGAR EN LA SEGUNDA VERSION*/
-            null
+          ?
+          /*<h3 className={styles["task-date"]}>Entrega: 27/04/23</h3> AGREGAR EN LA SEGUNDA VERSION*/
+          null
           : children.state === "complete"
             ? (<p className={styles["task-state"]}>Completed</p>)
             : null
@@ -58,15 +81,24 @@ function Task(props) {
       </div>
       <div className={styles["buttons-wrapper"]}>
         {children.state === "incomplete" ?
-          (<button className={styles['buttons-completed']} onClick={handleComplete}>
+          (<>
+          <button className={styles['buttons-completed']} onClick={handleComplete}>
             completed
-          </button>)
+          </button>
+          <button className={styles['buttons-delete']} onClick={() => handleDeleteTaskComplete("task")}>
+            Delete
+          </button>
+          </>)
           : children.state === "complete" ?
-            (
+            (<>
               <button className={styles['buttons-incomplete']} onClick={handleIncomplete}>
                 Incomplete
-              </button>) :
-            null
+              </button>
+              <button className={styles['buttons-delete']} onClick={() => handleDeleteTaskComplete("completed")}>
+              Delete
+            </button>
+            </>)
+            : null
         }
 
       </div>

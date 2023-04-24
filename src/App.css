@@ -1,13 +1,13 @@
 
 .tasks-buttons,.media-disable-buttons{
   display: flex;
-  gap: 18px;
+  gap: var(--margin-md);
 }
 
 .tasks-scroll-container{
       height: 100% ;
     overflow: auto;
-    margin-bottom: 18px;
+    margin-bottom: var(--margin-md);
     border-radius: 18px;
 }
 .tasks-scroll-container-disabled{
@@ -47,12 +47,12 @@
 .tasks-grid{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 18px;
+  gap: var(--margin-md);
 }
 .message-wrapper{
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: var(--margin-md);
 align-items: center;
 }
 .message{

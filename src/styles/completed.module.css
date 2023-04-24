@@ -1,7 +1,7 @@
 .completed-wrapper{
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: var(--margin-md);
 }
 .title-wrapper{
     display: flex;
@@ -19,16 +19,10 @@
 .message{
     font-size: 16px;
     font-weight: 400;
-    margin-top: 24px;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
 }
-.completed-column{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 24px;
-}
+
 @media (max-width:768px) {
   .title-wrapper{
     justify-content: space-between;

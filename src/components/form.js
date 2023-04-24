@@ -55,7 +55,8 @@ function TaskForm(props) {
           <input required placeholder="Title" type="text" name="title" />
           <textarea required placeholder="Description" name="description"></textarea>
         </div>
-        <Btn bg="white" type="submit" >Add +</Btn>
+        <Btn className={styles["add-btn"]} bg="white" type="submit" >Add +</Btn>
+        <button className={styles["close-btn"]} onClick={()=>setFormActive(!formActive)}>x</button>
       </form>
     </div>
 

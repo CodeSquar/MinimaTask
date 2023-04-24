@@ -29,7 +29,7 @@
     font-size: 16px;
     font-weight: 900;
     color: var(--main-color);
-    margin-top: 12px;
+    margin-top: var(--margin-sm);
 }
 .task-title:first-child{    
     margin-top: 0;
@@ -38,7 +38,7 @@
     font-size: 16px;
     font-weight: 600;
     color: var(--main-color);
-    margin-top: 12px;
+  margin-top: var(--margin-sm);
     height: max-content;
     max-height: 80px;
     overflow: auto;
@@ -79,9 +79,9 @@
     margin-left: auto;
 }
 .buttons-wrapper {
-    margin-top: 18px;
+    margin-top: var(--margin-md);
     display: flex;
-    gap: 12px;
+    gap: var(--margin-md);
     justify-content: flex-end;
 }
 .buttons-wrapper button{
@@ -97,16 +97,14 @@
 }
 .buttons-incomplete {
     color: rgb(255, 255, 255);
-    border: none;
-    font-weight: 700;
-    text-transform: capitalize;
-    background-color: transparent;
-    opacity: 0.6;
-    cursor: pointer;
+
 }
 .buttons-incomplete:hover{
     opacity: 1;
 }
 .buttons-completed {
     color: #00C892;
+}
+.buttons-delete{
+    color: #ad2028;
 }

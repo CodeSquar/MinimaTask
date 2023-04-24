@@ -15,7 +15,7 @@ function HamburgerMobileBtn(props) {
             <div  className={styles["hamburger-btn"]}>
                 {active && (
                     <div className={styles["buttons-wrapper"]}>
-                        <Btn bg="#87DA66" color="black" to="/completed">
+                        <Btn bg="#12c95a" color="black" to="/completed">
                             See completed
                         </Btn>
                         <Btn bg="#AD2028" color="white" onClick={() => { setTasks([]); setCompletedTasks([]); }}>

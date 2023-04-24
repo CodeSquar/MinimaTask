@@ -17,15 +17,15 @@
 .buttons-wrapper{
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap:var(--margin-md);
     position: absolute;
     right: 0;
-    bottom: 78px;
+    bottom:calc(2 * var(--margin-eb)) ;
     background-color: rgb(12, 11, 16,0.6);
     animation: in-buttons ease-in-out 0.24s;
     backdrop-filter: blur(18px);
     border-radius: 0px;
-    padding: 30px;
+    padding: var(--margin-bg);
     width: 100vw;
 
 }

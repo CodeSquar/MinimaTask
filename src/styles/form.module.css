@@ -37,8 +37,9 @@
     width: 354px;
     display: flex;
     flex-direction: column;
-    padding: 30px 36px;
+    padding: var(--margin-eb);
     animation: form-in 0.24s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     transform-origin: bottom;
     box-shadow: var(--default-shadow)
 
@@ -51,17 +52,17 @@
 .form-container form p{
     font-size: 13px;
     font-weight: 500;
-    margin-top: 12px;
+    margin-top: var(--margin-sm);
     color: var(--main-color);
 }
 .inputs-container{
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin: 24px 0px;
+    gap: var(--margin-sm);
+    margin: var(--margin-eb) 0px;
 }
 .inputs-container input,.inputs-container textarea{
-    padding: 12px;
+    padding: var(--margin-sm);
     border: none;
     border-bottom: 1px solid var(--main-color);
     opacity: 0.6;
@@ -78,13 +79,32 @@
 .inputs-container textarea{
     resize: none;
 }
-.form-container form button{
-    width: 100%;
-    padding: 12px;
+.close-btn{
+    position: absolute;
+    right: var(--margin-eb);
+    top: var(--margin-eb);
+    bottom: none;
+    display: none;
     color: white;
-    background-color: var(--main-color);
-    font-size: 13px;
-    font-weight: 900;
+    background-color: transparent;
+    padding: 0;
     border: none;
+    font-size: var(--margin-bg);
+    font-weight: 900;
     cursor: pointer;
+}
+@media (max-width:425px) {
+    .form-container form{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+    .form-container form .add-btn{
+        position:absolute;
+        bottom: var(--margin-eb);
+        right: var(--margin-eb);
+    }
+    .close-btn{
+        display: flex;
+    }
 }

@@ -38,7 +38,7 @@ function App() {
           </Btn>
         {tasks.length > 0 | completedTasks.length > 0 && (
           <div className='media-disable-buttons'>
-            <Btn bg="#87DA66" color="black" to="/completed">
+            <Btn bg="#12c95a" color="black" to="/completed">
               See completed
             </Btn>
 
@@ -47,8 +47,6 @@ function App() {
             </Btn>
           </div>
         )}
-          
-          
           <HamburgerMobileBtn className="hamburger-btn"/>
         </div>
       
